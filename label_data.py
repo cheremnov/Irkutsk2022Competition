@@ -91,7 +91,7 @@ class Labeler:
     def load_csv(self):
         # Load dataframe with columns 'image', 'label', 'door_id'
         if os.path.exists(self.path_to_csv):
-            self.doors_df = pd.read_csv(self.path_to_csv, index=False)
+            self.doors_df = pd.read_csv(self.path_to_csv)
         else:
             self.doors_df = pd.DataFrame(columns=['image', 'label', 'door_id'])
 
